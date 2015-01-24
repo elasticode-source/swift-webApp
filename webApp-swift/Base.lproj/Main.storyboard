@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="webApp_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7e8-6l-msK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9K-9G-7nR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlL-pQ-QTt" userLabel="splashView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kLz-P5-VnT">
+                                        <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.74773746910000005" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="kLz-P5-VnT" secondAttribute="centerX" id="9A5-5H-Qm3"/>
+                                    <constraint firstAttribute="centerY" secondItem="kLz-P5-VnT" secondAttribute="centerY" id="FUJ-z7-WtB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tlL-pQ-QTt" secondAttribute="bottom" id="9eH-X7-4GQ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="W9K-9G-7nR" secondAttribute="bottom" id="QkH-ol-CzK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tlL-pQ-QTt" secondAttribute="trailing" constant="-16" id="TGA-IE-gIG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W9K-9G-7nR" secondAttribute="trailing" constant="-16" id="VoO-Zc-X6E"/>
+                            <constraint firstItem="tlL-pQ-QTt" firstAttribute="top" secondItem="7e8-6l-msK" secondAttribute="topMargin" constant="20" id="pgc-ew-nof"/>
+                            <constraint firstItem="tlL-pQ-QTt" firstAttribute="leading" secondItem="7e8-6l-msK" secondAttribute="leadingMargin" constant="-16" id="rFb-gc-2CF"/>
+                            <constraint firstItem="W9K-9G-7nR" firstAttribute="leading" secondItem="7e8-6l-msK" secondAttribute="leadingMargin" constant="-16" id="uIs-XK-lTa"/>
+                            <constraint firstItem="W9K-9G-7nR" firstAttribute="top" secondItem="7e8-6l-msK" secondAttribute="topMargin" constant="20" id="wDt-uV-X6I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashAnimation" destination="tlL-pQ-QTt" id="BxH-u5-KQP"/>
+                        <outlet property="webView" destination="W9K-9G-7nR" id="a44-wM-Blr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
